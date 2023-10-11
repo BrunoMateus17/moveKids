@@ -7,23 +7,18 @@
                     <span class="fs-5 d-none d-sm-inline">Menu</span>
                 </a>
                 <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
-                    <!-- <li class="nav-item">
-                        <a href="#" data-value="modulos/home/template/home.php" class="nav-link align-middle selecioneModulo px-0">
-                            <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Home</span>
-                        </a>
-                    </li> -->
                     <li class="nav-item">
-                        <a href="#" data-value="modulos/jogos/template/jogos.php" class="nav-link align-middle selecioneModulo px-0">
+                        <a href="#" data-value="usuarios/template/index.php" class="nav-link align-middle selecioneModulo px-0">
                             <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Usuario</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" data-value="modulos/jogos/template/jogos.php" class="nav-link align-middle selecioneModulo px-0">
+                        <a href="#" data-value="categorias/template/index.php" class="nav-link align-middle selecioneModulo px-0">
                             <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Categoria</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" data-value="modulos/jogos/template/jogos.php" class="nav-link align-middle selecioneModulo px-0">
+                        <a href="#" data-value="games/template/index.php" class="nav-link align-middle selecioneModulo px-0">
                             <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Jogos</span>
                         </a>
                     </li>

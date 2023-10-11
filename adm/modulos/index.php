@@ -2,7 +2,6 @@
 <style>
     iframe{
         border: none;
-        position: fixed;
         width: 100%;
         height: 100%;
     }
@@ -13,10 +12,4 @@
             </div>
         </div>
     </div>
-    <!-- <div class="container-fluid overflow-hidden">
-        <div class="row flex-nowrap">
-            <div class="col p-0">
-            </div>
-        </div>
-    </div> -->
 <?php include_once "includes/bottom.php"?>

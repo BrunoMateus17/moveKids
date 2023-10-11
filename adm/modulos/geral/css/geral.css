@@ -1,0 +1,96 @@
+:root{
+    --var-color-primary-500:#060212;
+    --var-color-primary-400:#240C6B;
+    --var-color-primary-300:#4E1AEB;
+    --var-color-primary-200:#521BF7;
+    --var-color-primary-100:#4617D1;
+
+    --var-color-secondary-100:#D1460F;
+    --var-color-secondary-200:#F75211;
+    --var-color-secondary-300:#EB4E10;
+    --var-color-secondary-400:#6B2407;
+    --var-color-secondary-500:#FE5412;
+
+    --var-color-tertiary-100:#D11515;
+    --var-color-tertiary-200:#F71919;
+    --var-color-tertiary-300:#EB1717;
+    --var-color-tertiary-400:#6B0B0B;
+    --var-color-tertiary-500:#FC1A1A;
+
+    --var-color-quaternary-100:#4F504F;
+    --var-color-quaternary-200:#6A6B6A;
+    --var-color-quaternary-300:#E8EBE8;
+    --var-color-quaternary-400:#F5F7F5;
+    --var-color-quaternary-500:#CFD1CF;
+
+    --var-color-structure-100:#D19F0A;
+    --var-color-structure-200:#F7BD0C;
+    --var-color-structure-300:#EBB30C;
+    --var-color-structure-400:#6B5205;
+    --var-color-structure-500:#795C06;
+
+    --var-color-senary-100:#0fc941;
+    --var-color-senary-200:#F7BD0C;
+    --var-color-senary-300:#EBB30C;
+    --var-color-senary-400:#6B5205;
+    --var-color-senary-500:#795C06;
+
+
+}
+
+.cursor-p{
+    cursor: pointer !important;
+}
+
+.newName{
+    color: var(--var-color-secondary-100);
+}
+
+label{
+    color: rgb(3, 3, 3);
+    font-weight: bold;
+}
+
+.btn{
+    background-color: var(--var-color-primary-100) !important;
+    border-color:  var(--var-color-primary-100) !important;
+    color: white !important;
+}
+
+.headerCadastro{
+    border-bottom: 1px solid white;
+    margin-bottom: 15px;
+}
+
+.footerCadastro{
+    border-top: 1px solid white;
+    margin-top: 15px;
+}
+
+.form-control{
+    display: block;
+    border-radius: 10px !important;
+    border: 2px solid rgb(0, 0, 0) !important;
+    font-weight: bold !important;
+}
+
+
+.bodyForm{
+    background-color: var(--var-color-quaternary-500) !important;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+
+/* table */
+
+thead{
+    /* border-bottom: 2px solid white !important; */
+}
+
+th,td {
+    color: rgb(0, 0, 0) !important;
+}
+
+
+
