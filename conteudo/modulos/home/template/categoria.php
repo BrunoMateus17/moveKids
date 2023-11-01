@@ -13,8 +13,9 @@
     <body>
         <div class="container-fluid">
             <div class="conteudo">
-                sad
+                
             </div>
         </div>
+        <script src="../js/categoria_function.js"></script>
     </body>
 </html>

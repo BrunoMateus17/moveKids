@@ -1,2 +1,2 @@
 <?php 
-    header("Location: login/template/index.php");
+    header("Location: conteudo/index.php");
