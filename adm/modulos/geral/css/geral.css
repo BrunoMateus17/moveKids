@@ -30,62 +30,89 @@
     --var-color-structure-500:#795C06;
 
     --var-color-senary-100:#0fc941;
-    --var-color-senary-200:#F7BD0C;
-    --var-color-senary-300:#EBB30C;
-    --var-color-senary-400:#6B5205;
-    --var-color-senary-500:#795C06;
+    --var-bg-titulo:rgba(0,0,0,.125);
+   
 
+}
 
+body{
+    font-family: 'lite', sans-serif !important;
 }
 
 .cursor-p{
     cursor: pointer !important;
 }
 
-.newName{
-    color: var(--var-color-secondary-100);
+.imagem-table{
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    position: relative;
+    bottom: 42px;
 }
+
+iframe{
+    width: 100%;
+    height: 100%;
+}
+
+/* modal */
+
+.modal-header{
+    background-color: var(--var-bg-titulo) !important;
+    border-bottom: 1px solid var(--var-bg-titulo);
+}
+
+.modal-tamanho{
+    height: 600px;
+}
+
+/* cadastro */
 
 label{
     color: rgb(3, 3, 3);
     font-weight: bold;
-}
-
-.btn{
-    background-color: var(--var-color-primary-100) !important;
-    border-color:  var(--var-color-primary-100) !important;
-    color: white !important;
-}
-
-.headerCadastro{
-    border-bottom: 1px solid white;
-    margin-bottom: 15px;
-}
-
-.footerCadastro{
-    border-top: 1px solid white;
-    margin-top: 15px;
+    margin-top: 8px;
+    margin-bottom: 0px;
 }
 
 .form-control{
     display: block;
     border-radius: 10px !important;
-    border: 2px solid rgb(0, 0, 0) !important;
-    font-weight: bold !important;
+}
+
+.verificacao{
+    border: 1px solid red !important;
 }
 
 
-.bodyForm{
-    background-color: var(--var-color-quaternary-500) !important;
-    border-radius: 20px;
-    font-weight: bold;
+/* button */
+
+button{
+    background-color: var(--var-color-primary-100) ;
+    border-color:  var(--var-color-primary-100) ;
+    color: white !important;
+    border-radius: 20px !important;
+    font-weight: bold !important;
+}
+
+.btn-cadastro{
+    background-color: var(--var-color-senary-100) !important;
+    color: white !important;
+    font-weight: bold !important;
+}
+
+.btn-alteracao{
+    background-color: var(--var-color-senary-100) !important;
+    color: white !important;
+    font-weight: bold !important;
 }
 
 
 /* table */
 
 thead{
-    /* border-bottom: 2px solid white !important; */
+    border-bottom: 2px solid white !important;
 }
 
 th,td {

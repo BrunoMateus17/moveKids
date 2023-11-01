@@ -1,5 +1,5 @@
 <?php 
-    include_once "../../../../../config/Conexao.php";
+    include_once "../../../../../database/Conexao.php";
     try{
         $conn = Conexao::conectar();
         $sql = $conn->prepare("
@@ -8,13 +8,17 @@
                 (
                     nome,
                     status,
-                    descricao
+                    descricao,
+                    usuarioCriacao,
+                    dataCadastro
                 )
                 VALUES
                 (
                     :nome,
                     :status,
-                    :descricao
+                    :descricao,
+                    'Bruno Mateus da rocha',
+                     NOW()
 
                 );
             ';

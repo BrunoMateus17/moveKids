@@ -1,5 +1,5 @@
 <?php 
-    include_once "../../../../../config/Conexao.php";
+    include_once "../../../../../database/Conexao.php";
     try{
         $conn = Conexao::conectar();
         $sql = $conn->prepare("
@@ -8,7 +8,9 @@
         SET 
             nome = :nome,
             status = :status,
-            descricao = :descricao
+            descricao = :descricao,
+            usuarioAlteracao = 'Bruno Mateus da Rocha',
+            dataAlteracao =  NOW()
         WHERE 
             id = :id
         ");

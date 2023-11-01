@@ -1,5 +1,6 @@
 <?php
-    include_once "../../../../../config/Conexao.php";
+    include_once "../../../../../database/Conexao.php";
+
     try {
         $conn = Conexao::conectar();
         $sql = $conn->prepare("
@@ -7,9 +8,10 @@
                 id,
                 nome,
                 status,
-                descricao
+                descricao,
+                (SELECT COUNT(*) FROM games g WHERE g.categoria_id = c.id ) as total
             FROM
-                categoria
+                categoria c
             WHERE 
                 IF(:id != '', id = :id, 0=0)
         ");
@@ -22,5 +24,5 @@
             echo '{"success":false,"message":"Não foi possivel listar os usuarios"}';
         }
     }catch (PDOException $e) {
-        echo "Conexão falhou ! ". $e->getMessage();
+        echo '{"success":false,"message": '.$e->getMessage().'}';
     }

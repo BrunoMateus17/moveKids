@@ -7,9 +7,7 @@
     }
 </style>
     <?php include_once "includes/siderbar.php"?>
-        <div class="col py-3">
-                <iframe class="iframe" src="games/template/index.php" frameborder="0"></iframe>
-            </div>
-        </div>
-    </div>
+        <div class="frame">
+            <iframe src="games/template/index.php" frameborder="0"></iframe>
+        </div>  
 <?php include_once "includes/bottom.php"?>
