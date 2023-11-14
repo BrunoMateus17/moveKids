@@ -7,26 +7,53 @@ function Games(){
                 games.listarDados($(this).data("value"));
             }else{
                 $(".valueImg").text("");
-
+            
                 $("form .form-control").each(function(i){
                     $(this).val("");
                 });
                 $("#btnAlterar").addClass("d-none");
                 $("#btnCadastro").removeClass("d-none");
                 $('#modalAcoes').modal('show');
+                tinyMCE.get('sobre').setContent("");
+                tinyMCE.get('instrucoes').setContent("");
             }
+
+            
         })
+
+        tinymce.init({
+            selector: '#sobre',
+            plugins: [
+              'a11ychecker','advlist','advcode','advtable','autolink','checklist','export',
+              'lists','link','image','charmap','preview','anchor','searchreplace','visualblocks',
+              'powerpaste','fullscreen','formatpainter','insertdatetime','media','table','help','wordcount'
+            ],
+            toolbar: 'undo redo | formatpainter casechange blocks | bold italic backcolor | ' +
+              'alignleft aligncenter alignright alignjustify | ' +
+              'bullist numlist checklist outdent indent | removeformat | a11ycheck code table help'
+          });
+        tinymce.init({
+            selector: '#instrucoes',
+            plugins: [
+              'a11ychecker','advlist','advcode','advtable','autolink','checklist','export',
+              'lists','link','image','charmap','preview','anchor','searchreplace','visualblocks',
+              'powerpaste','fullscreen','formatpainter','insertdatetime','media','table','help','wordcount'
+            ],
+            toolbar: 'undo redo | formatpainter casechange blocks | bold italic backcolor | ' +
+              'alignleft aligncenter alignright alignjustify | ' +
+              'bullist numlist checklist outdent indent | removeformat | a11ycheck code table help'
+          });
         $(document).on("click",".btn-visualizar",function(){
             $("iframe").attr("src",$(this).data("value"))
             $('#modalUrl').modal('show');
         })
 
         $("#btnCadastro").click(function(){
-            if(main.checkData()){
-                Swal.fire('',"Existe campos vazios",'warning');
-            }else{
+            // if(main.checkData()){
+            //     Swal.fire('',"Existe campos vazios",'warning');
+            // }else{
                 games.cadastro();
-            }
+            // }
         })
 
         $("#btnAlterar").click(function(){
@@ -128,6 +155,7 @@ function Games(){
        .done(function(json){
             var dados = JSON.parse(json);
             if(dados.success){
+
                 $("form .form-control").each(function(i){
                     if($(this).attr("id") != "img"){
                         $(this).val(dados.elements[0][$(this).attr("name")]);
@@ -136,6 +164,8 @@ function Games(){
                     }
                 });
 
+                tinyMCE.get('sobre').setContent(dados.elements[0]['sobre']);
+                tinyMCE.get('instrucoes').setContent(dados.elements[0]['instrucoes']);
 
                 $('#modalAcoes').modal('show');
                 $("#btnAlterar").removeClass("d-none");
@@ -176,6 +206,8 @@ function Games(){
     this.alterar = function(){
         var formdata = new FormData($("form")[0]);
         formdata.append("imgAntiga",$(".valueImg").text());
+        formdata.append("sobre",tinyMCE.get('sobre').getContent());
+        formdata.append("instrucoes",tinyMCE.get('instrucoes').getContent());
         $.ajax({
             url : "../service/alterar/",
             type : 'POST',

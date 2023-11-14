@@ -8,11 +8,7 @@
         height: 100%;
     }
 </style>
-    <div class="container-fluid overflow-hidden">
-        <div class="row flex-nowrap">
-            <div class="col p-0">
-                <iframe class="iframe" src="modulos/home/template/home.php" frameborder="0"></iframe>
-            </div>
-        </div>
-    </div>
+
+    <iframe class="iframe" src="modulos/home/template/home.php" frameborder="0"></iframe>
+
 <?php include_once "includes/bottom.php"?>

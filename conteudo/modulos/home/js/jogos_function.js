@@ -19,7 +19,9 @@ function Jogos(){
        .done(function(json){
             var dados = JSON.parse(json);
             if(dados.success){
-                $(".iframe").attr("src",dados.elements[0].url)
+                $(".iframe").attr("src",dados.elements[0].url);
+                $("#sobreGame").html(dados.elements[0].sobre);
+                $("#instrucoesGame").html(dados.elements[0].instrucoes);
             }else{
                 Swal.fire('Ops...',dados.message,'error')
             }

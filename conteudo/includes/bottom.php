@@ -28,21 +28,22 @@
 						data :  {codigo:""}
 					})
 					.done(function(json){
-							var dados = JSON.parse(json);
-							if(dados.success){
-								var html = "";
-								for (const i in dados.elements) {
-									html += '<li> ';
-									html += '	<a href="#" class="btn-categoria" data-value="'+dados.elements[i].id+'"> ';
-									html += '		<span class="icon"></span> ';
-									html += '		<span class="text">'+dados.elements[i].nome+'</span> ';
-									html += '	</a> ';
-									html += '</li> ';
-								}
-								$(".categorias-list").html(html);
-							}else{
-								Swal.fire('Ops...',dados.message,'error')
+						var dados = JSON.parse(json);
+						if(dados.success){
+							var html = "";
+							for (const i in dados.elements) {
+								html += '<li class="">';
+								html += '	<a href="#" class="btn-categoria" data-value="'+dados.elements[i].id+'">';
+								// html += '	<span class="icon icon-bike"></span>';
+								html += '		<span class="text">'+dados.elements[i].nome+'</span>';
+								html += '	</a>';
+								html += '</li>';
 							}
+							$(".main-nav").html(html);
+							$(".mobile-list").html(html);
+						}else{
+							Swal.fire('Ops...',dados.message,'error')
+						}
 					})
 					.fail(function(jqXHR, textStatus, msg){
 							Swal.fire('Ops...',msg,'error')

@@ -22,7 +22,9 @@
                 </div>
                 <div class="game-sobre">
                     <div class="d-flex flex-column footerIframe align-items-center">
-                        <img class="img-icon" src="https://cdn.jogos360.com.br/fi/re/fireboy-e-watergirl-in-the-forest-temple-d.jpg?width=40&amp;height=40&amp;aspect_ratio=1:1" loading="lazy" alt="Game Thumb" width="40" height="40">
+                        <div id="sobreGame"></div>
+                        <div id="instrucoesGame"></div>
+                        <!-- <img class="img-icon" src="https://cdn.jogos360.com.br/fi/re/fireboy-e-watergirl-in-the-forest-temple-d.jpg?width=40&amp;height=40&amp;aspect_ratio=1:1" loading="lazy" alt="Game Thumb" width="40" height="40">
                         <div class="texto">Fireboy and Watergirl 1: Forest Temple  </div>
                             <div class="descricao">
                                 <div class="column-left info">
@@ -32,7 +34,7 @@
                                     Setas: controlar o Menino Fogo</p>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                
