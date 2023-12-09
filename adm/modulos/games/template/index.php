@@ -29,7 +29,6 @@
                                     <th scope="col"></th>
                                     <th scope="col">Titulo</th>
                                     <th scope="col">Categoria</th>
-                                    <th scope="col">Sobre</th>
                                     <th scope="col">Status</th>
                                     <th scope="col" class="text-center">Ações</th>
                                 </tr>

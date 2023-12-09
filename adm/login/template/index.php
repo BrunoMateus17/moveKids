@@ -5,10 +5,10 @@
 				<div class="container">
 					<div class="signin-content">
 						<div class="signin-image">
-							<figure><img src="../images/signin-image.jpg" alt="sing up image"></figure>
+							<figure><img src="../images/image.png" alt="sing up image"></figure>
 						</div>
 						<div class="signin-form">
-							<h2 class="form-title">Move kids</h2>
+							<h2 class="form-title">MoveKids</h2>
 							<div class="form-group">
 								<label for="email"><i class="zmdi zmdi-account material-icons-name"></i></label>
 								<input type="text" name="email" id="email" value="brunomateus2017@hotmail.com.br" placeholder="Seu Email">

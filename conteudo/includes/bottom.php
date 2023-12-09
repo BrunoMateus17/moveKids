@@ -13,10 +13,11 @@
 
 					$('.search').on('keydown', function(e) {
 						if(e.keyCode == 13){
-							console.log(123)
 							$("iframe").attr("src","modulos/home/template/buscar.php?text="+$('input').val())
-							// modulos.buscarJogos();
 						}
+					});
+					$('.search-inner-button').on('click', function(e) {
+						$("iframe").attr("src","modulos/home/template/buscar.php?text="+$('input').val())
 					});
 				}
 
@@ -31,6 +32,11 @@
 						var dados = JSON.parse(json);
 						if(dados.success){
 							var html = "";
+								html += '<li class="">';
+								html += '	<a href="javascript:window.location.reload(true)" class="btn-categoria" >';
+								html += '		<span class="text">Home</span>';
+								html += '	</a>';
+								html += '</li>';
 							for (const i in dados.elements) {
 								html += '<li class="">';
 								html += '	<a href="#" class="btn-categoria" data-value="'+dados.elements[i].id+'">';

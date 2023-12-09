@@ -110,7 +110,6 @@ function Games(){
                     html += '   <td><img src="../../../../upload/'+dados.elements[i].img+'" class="imagem-table"></img></td>';
                     html += '   <td>'+dados.elements[i].titulo+'</td>';
                     html += '   <td>'+dados.elements[i].categoria+'</td>';
-                    html += '   <td>'+dados.elements[i].sobre+'</td>';
                     html += '   <td>'+(dados.elements[i].status == "H" ? "Habilitado" : "Desabilitado" )+'</td>';
                     html += '   <td class="text-center"> ';
                     html += '       <span class="p-0 btn-modal cursor-p" data-value="'+dados.elements[i].id+'">';
@@ -135,8 +134,9 @@ function Games(){
                 }
                 $("tbody").html(html);
                 games.listarCategoria();
-
+                
             }else{
+                games.listarCategoria();
                 $("tbody").html('<tr><td class="text-center" colspan="4">Listagem vazia</td></tr>');
                 Swal.fire('Ops...',dados.message,'error')
             }
@@ -181,6 +181,8 @@ function Games(){
 
     this.cadastro = function(){
         var formdata = new FormData($("form")[0]);
+        formdata.append("sobre",tinyMCE.get('sobre').getContent());
+        formdata.append("instrucoes",tinyMCE.get('instrucoes').getContent());
         $.ajax({
             url : "../service/cadastro/",
             type : 'POST',
@@ -233,7 +235,7 @@ function Games(){
     this.deletar = function(id){
         Swal.fire({
             title:'',
-            text:'Deseja deletar essa categoria ?',
+            text:'Deseja deletar esse game ?',
             icon:'question',
             confirmButtonText: 'Sim',
             cancelButtonText: 'Não',

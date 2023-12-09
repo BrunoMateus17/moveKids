@@ -25,9 +25,11 @@
                 IF(:text != '', g.titulo LIKE :text, 0=0) AND
                  c.status = 'H'
         ");
+        $text = $_POST['text'] ?? '';
+        $text = '%'.$text.'%';
         $sql->bindParam("id",$_POST['id']);
         $sql->bindParam("categoria_id",$_POST['categoria_id']);
-        $sql->bindParam("text",$_POST['text']);
+        $sql->bindParam("text",$text);
         $sql->execute();
         $data = $sql->fetchAll(PDO::FETCH_ASSOC); 
         if($data){

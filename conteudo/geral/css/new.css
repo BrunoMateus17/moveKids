@@ -6535,13 +6535,14 @@ body.newgamespage a.label-l.new-l:before {
 }
 
 .thumb-v2 .thumb-info .thumb-title {
-    display: flex;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
     align-items: center;
     font-size: 14.5px;
     font-weight: 500;
     -webkit-font-smoothing: antialiased;
-    overflow: hidden;
-    text-overflow: ellipsis;
     animation-delay: .2s;
     animation-fill-mode: forwards;
     animation-duration: .2s;
@@ -7494,14 +7495,14 @@ body.newgamespage a.label-l.new-l:before {
 
 @media(min-width: 1024px) {
     .game-page-grid .grid-player {
-        grid-column:span 6;
+        grid-column:span 8;
         min-height: 515px
     }
 }
 
 @media(min-width: 1536px) {
     .game-page-grid .grid-player {
-        grid-column:span 7
+        grid-column:span 9
     }
 }
 
@@ -7513,7 +7514,7 @@ body.newgamespage a.label-l.new-l:before {
 
 @media(min-width: 1800px) {
     .game-page-grid .grid-player {
-        grid-column:3/span 7;
+        grid-column:1/span 11;
         grid-row: span 4
     }
 }
